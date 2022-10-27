@@ -1,13 +1,15 @@
 #!/bin/bash
 cd
 m=0
-while (("${m}" < "686300"))
+while (("${m}" <= "686300"))
 do
     h=$(haqqd status |jq .SyncInfo.latest_block_height)
+    # убираем ковычку
     m=$(sed -e 's/^"//' -e 's/"$//' <<<"$h")
-    echo "current height" ${m}
+    echo "tek vysota" ${m}
     sleep 1
 done
+
 sudo systemctl stop haqqd
 cd $HOME && rm -rf haqq
 git clone https://github.com/haqq-network/haqq && cd haqq
