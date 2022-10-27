@@ -32,7 +32,7 @@ do
     sleep 1
 done
 
-cp /root/haqq121/haqq121/hp /root/go/bin/
+cp /root/haqq121/haqq121/haqqd /root/go/bin/
 
 systemctl restart haqqd && journalctl -u haqqd -f -o cat
 ```
