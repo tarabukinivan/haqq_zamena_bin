@@ -1,0 +1,11 @@
+#!/bin/bash
+cd
+m=0
+while (("${m}" <= "686300"))
+do
+    h=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)
+    echo "tek vysota" ${m}
+    sleep 1
+done
+
+echo gotov
