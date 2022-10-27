@@ -1,11 +1,9 @@
 #!/bin/bash
 cd
 m=0
-while (("${m}" <= "686300"))
+while (("${m}" < "684833"))
 do
-    h=$(haqqd status |jq .SyncInfo.latest_block_height)
-    # убираем ковычку
-    m=$(sed -e 's/^"//' -e 's/"$//' <<<"$h")
+    m=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)
     echo "current height" ${m}
     sleep 1
 done
