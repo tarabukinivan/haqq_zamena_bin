@@ -1,7 +1,7 @@
 #!/bin/bash
 cd
 m=0
-while (("${m}" < "684890"))
+while (("${m}" < "684935"))
 do
     m=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)
     echo "current height" ${m}
