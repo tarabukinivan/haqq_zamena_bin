@@ -1,6 +1,6 @@
 #!/bin/bash
 cd $HOME
-m=0
+m=7
 while (("${m}" < "686298"))
 do
     m=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)    
