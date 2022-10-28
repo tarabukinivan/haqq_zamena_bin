@@ -8,10 +8,10 @@ do
     sleep 1
 done
 
-sudo systemctl stop haqqd
-rm -rf haqq
-git clone https://github.com/haqq-network/haqq && cd haqq
-git checkout v1.2.1
-make install
+#sudo systemctl stop haqqd
+#rm -rf haqq
+#git clone https://github.com/haqq-network/haqq && cd haqq
+#git checkout v1.2.1
+#make install
 
-systemctl restart haqqd && journalctl -u haqqd -f -o cat
+#systemctl restart haqqd && journalctl -u haqqd -f -o cat
