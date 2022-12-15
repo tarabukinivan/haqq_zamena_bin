@@ -28,7 +28,7 @@ do
     sleep 1
 done
 
-#systemctl stop haqqd
-#sleep 1
-#cp /root/haqq121/haqq121/haqqd /root/go/bin/
-#systemctl restart haqqd && journalctl -u haqqd -f -o cat
+systemctl stop haqqd
+sleep 1
+cp /root/haqq121/haqq121/haqqd /root/go/bin/
+systemctl restart haqqd && journalctl -u haqqd -f -o cat
