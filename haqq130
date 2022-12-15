@@ -10,7 +10,7 @@ if ! [ -f /root/haqq130/haqq_1.3.0_Windows_x86_64.zip ]; then
 wget https://github.com/haqq-network/haqq/releases/download/v1.3.0/haqq_1.3.0_Windows_x86_64.zip &>/dev/null
 fi
 a=`sha256sum haqq_1.3.0_Windows_x86_64.zip`
-if [[ "$a" != 90b27c9cf7b86b381fa0cfe78fb29bfcf467d0cbb8a12c17050b3708b75d* ]]
+if [[ "$a" != d109d85bbcb6d3ddd3b70540d12bcf932621f7e6fdc08d4a7ce4fe227f01* ]]
 then
   echo -e "check suuma ne sovpadaet.\nVash check: $a"
   exit
