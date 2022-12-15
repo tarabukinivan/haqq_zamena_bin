@@ -1,0 +1,34 @@
+#!/bin/bash
+echo "-----------------------------------------------------------------------------"
+
+cd $HOME
+if ! [ -d /root/haqq130/ ]; then
+mkdir haqq130
+fi
+cd haqq130
+if ! [ -f /root/haqq130/haqq_1.3.0_Windows_x86_64.zip ]; then
+wget https://github.com/haqq-network/haqq/releases/download/v1.3.0/haqq_1.3.0_Windows_x86_64.zip &>/dev/null
+fi
+a=$(sha256sum haqq_1.2.1_Linux_arm64.tar.gz)
+if [[ "$a" != 90b27c9cf7b86b381fa0cfe78fb29bfcf467d0cbb8a12c17050b3708b75d* ]]
+then
+  echo -e "check suuma ne sovpadaet.\nVash check: $a"
+  exit
+fi
+unzip haqq_1.3.0_Windows_x86_64.zip && rm haqq_1.3.0_Windows_x86_64.zip
+mv /root/haqq130/bin /root/haqq130/haqq130
+mkdir /root/haqq130/haqq121
+cp /root/go/bin/haqqd  /root/haqq130/haqq121
+
+m=0
+while (("${m}" < "1412300"))
+do
+    m=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)    
+    echo "current height" ${m}
+    sleep 1
+done
+
+#systemctl stop haqqd
+#sleep 1
+#cp /root/haqq121/haqq121/haqqd /root/go/bin/
+#systemctl restart haqqd && journalctl -u haqqd -f -o cat
