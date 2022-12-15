@@ -21,14 +21,14 @@ mkdir /root/haqq121/haqq120
 cp /root/go/bin/haqqd  /root/haqq121/haqq120
 
 m=0
-while (("${m}" < "686300"))
+while (("${m}" < "1412300"))
 do
     m=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)    
     echo "current height" ${m}
     sleep 1
 done
 
-systemctl stop haqqd
-sleep 1
-cp /root/haqq121/haqq121/haqqd /root/go/bin/
-systemctl restart haqqd && journalctl -u haqqd -f -o cat
+#systemctl stop haqqd
+#sleep 1
+#cp /root/haqq121/haqq121/haqqd /root/go/bin/
+#systemctl restart haqqd && journalctl -u haqqd -f -o cat
