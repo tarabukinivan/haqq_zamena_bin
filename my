@@ -1,0 +1,44 @@
+94
+8.0K    ./espresso
+8.0K    ./.ethereum
+12K     ./massa_backup
+16K     ./.ssh
+24K     ./.config
+28K     ./.docker
+28K     ./snap
+32K     ./.siege
+88K     ./.defundold
+6.4M    ./.local
+7.7M    ./.pm2
+24M     ./haqqexp
+26M     ./haqq_bot
+51M     ./haqq
+63M     ./.npm
+178M    ./haqqupd
+584M    ./.cargo
+723M    ./.cache
+948M    ./manta-rs
+1.1G    ./.rustup
+1.7G    ./tfsc
+2.4G    ./bundlr
+3.2G    ./go
+407G    ./.haqqd
+
+95
+4.0K    ./.gitopia-janus-testnet-2
+16K     ./.ssh
+20K     ./.config
+28K     ./snap
+100K    ./.pm2
+172K    ./hello-world
+1.7M    ./.local
+25M     ./haqq_bot
+51M     ./haqq
+221M    ./.npm
+237M    ./haqqupd
+428M    ./.cargo
+981M    ./manta-rs
+1.1G    ./.cache
+1.2G    ./go
+1.2G    ./.rustup
+38G     ./.haqqd
