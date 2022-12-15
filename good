@@ -1,0 +1,16 @@
+#!/bin/bash
+for((;;)); do
+  height=$(haqqd status |& jq -r ."SyncInfo"."latest_block_height")
+    if ((height==1412300)); then
+      sudo systemctl stop haqqd.service
+      mv $HOME/haqq/build/haqqd $(which haqqd)
+      sudo systemctl restart haqqd.service
+      echo "restart"
+      break
+    else
+      echo $height
+    fi
+  sleep 8
+done
+
+Билд заранее
