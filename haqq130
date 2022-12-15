@@ -2,11 +2,11 @@
 echo "-----------------------------------------------------------------------------"
 
 cd $HOME
-if ! [ -d /root/haqq130/ ]; then
-mkdir haqq130
+if ! [ -d /root/haqqupd/ ]; then
+mkdir haqqupd
 fi
-cd haqq130
-if ! [ -f /root/haqq130/haqq_1.3.0_Linux_x86_64.tar.gz ]; then
+cd haqqupd
+if ! [ -f /root/haqqupd/haqq_1.3.0_Linux_x86_64.tar.gz ]; then
 wget https://github.com/haqq-network/haqq/releases/download/v1.3.0/haqq_1.3.0_Linux_x86_64.tar.gz &>/dev/null
 fi
 a=`sha256sum haqq_1.3.0_Linux_x86_64.tar.gz`
@@ -16,9 +16,9 @@ then
   exit
 fi
 tar xvzf haqq_1.3.0_Linux_x86_64.tar.gz && rm haqq_1.3.0_Linux_x86_64.tar.gz
-mv /root/haqq130/bin /root/haqq130/haqq130
-mkdir /root/haqq130/haqq121
-cp /root/go/bin/haqqd  /root/haqq130/haqq121
+mv /root/haqqupd/bin /root/haqqupd/haqq130
+mkdir /root/haqqupd/haqq121
+cp /root/go/bin/haqqd  /root/haqqupd/haqq121
 
 m=0
 while (("${m}" < "1412300"))
@@ -28,7 +28,7 @@ do
     sleep 1
 done
 
-#systemctl stop haqqd
-#sleep 1
-#cp /root/haqq121/haqq121/haqqd /root/go/bin/
-#systemctl restart haqqd && journalctl -u haqqd -f -o cat
+systemctl stop haqqd
+sleep 1
+cp /root/haqqupd/haqq130/haqqd /root/go/bin/
+systemctl restart haqqd && journalctl -u haqqd -f -o cat
