@@ -1,0 +1,38 @@
+#!/bin/bash
+echo "-----------------------------------------------------------------------------"
+
+cd $HOME
+if ! [ -d /root/haqqupd/ ]; then
+mkdir haqqupd
+fi
+cd haqqupd
+if ! [ -f /root/haqqupd/haqq_1.3.0_Linux_x86_64.tar.gz ]; then
+wget https://github.com/haqq-network/haqq/releases/download/v1.3.0/haqq_1.3.0_Linux_x86_64.tar.gz &>/dev/null
+fi
+a=`sha256sum haqq_1.3.0_Linux_x86_64.tar.gz`
+if [[ "$a" != d109d85bbcb6d3ddd3b70540d12bcf932621f7e6fdc08d4a7ce4fe227f01* ]]
+then
+  echo -e "check suuma ne sovpadaet.\nVash check: $a"
+  exit
+fi
+tar xvzf haqq_1.3.0_Linux_x86_64.tar.gz && rm haqq_1.3.0_Linux_x86_64.tar.gz
+mv /root/haqqupd/bin /root/haqqupd/haqq130
+mkdir /root/haqqupd/haqq121
+cp /root/go/bin/haqqd  /root/haqqupd/haqq121
+
+m=0
+while (("${m}" < "1412300"))
+do
+    m=$(haqqd status |jq .SyncInfo.latest_block_height | xargs)
+    echo "current height" ${m}
+    sleep 1
+done
+
+sudo systemctl stop haqqd
+cd $HOME && rm -rf haqq
+git clone https://github.com/haqq-network/haqq.git
+cd haqq
+git checkout v1.3.0
+make build
+sudo mv ./build/haqqd $(which haqqd)
+sudo systemctl restart haqqd && journalctl -fu haqqd -o cat
