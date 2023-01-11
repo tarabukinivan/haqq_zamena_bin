@@ -4,7 +4,7 @@ echo "--------------------------------------------------------------------------
 cd $HOME
 
 m=0
-while (("${m}" < "22301"))
+while (("${m}" < "22300"))
 do
     m=$(lavad status |jq .SyncInfo.latest_block_height | xargs)
     echo "current height" ${m}
