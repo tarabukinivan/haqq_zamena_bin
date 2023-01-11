@@ -2,7 +2,7 @@
 echo "-----------------------------------------------------------------------------"
 
 cd $HOME
-
+git clone https://github.com/lavanet/lava
 m=0
 while (("${m}" < "22300"))
 do
@@ -11,9 +11,8 @@ do
     sleep 1
 done
 
-cd $HOME
-git clone https://github.com/lavanet/lava
-cd lava
+
+cd $HOME/lava
 git fetch --all
 git checkout v0.4.3
 make install
