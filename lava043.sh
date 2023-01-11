@@ -14,7 +14,7 @@ done
 cd $HOME 
 git clone https://github.com/lavanet/lava 
 cd lava 
-//git fetch --all 
-//git checkout v0.4.3 
-//make install
-//sudo systemctl restart lavad && sudo journalctl -fu lavad -o cat
+git fetch --all 
+git checkout v0.4.3 
+make install
+sudo systemctl restart lavad && sudo journalctl -fu lavad -o cat
