@@ -1,0 +1,23 @@
+#!/bin/bash
+echo "-----------------------------------------------------------------------------"
+
+m=0
+while (("${m}" < "63760"))
+do
+    m=$(lavad status |jq .SyncInfo.latest_block_height | xargs)
+    dig=`echo "digid" | awk '/(^[0-9]{2,6}$)/'${m}`
+    if [ "$dig" = "digid" ];then
+      echo "current height" ${m}
+    else
+      echo "net otveta"
+      m=0
+    fi
+    sleep 1
+done
+cd $HOME/haqq
+git fetch --all
+git checkout v1.3.1
+sudo systemctl stop haqqd
+make install
+haqqd version
+sudo systemctl restart haqqd && journalctl -u haqqd -f -o cat
