@@ -1,4 +1,5 @@
-wget -O haqqv130.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq130 && chmod a+x haqqv130.sh && ./haqqv130.sh
+`haqqd status |jq .SyncInfo.latest_block_height | xargs`
+wget -O haqqv131.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq131 && chmod a+x haqqv131.sh && ./haqqv131.sh
 
 Проверить возвращает ли
 
