@@ -2,7 +2,7 @@
 echo "-----------------------------------------------------------------------------"
 
 m=0
-while (("${m}" < "63760"))
+while (("${m}" < "2229900"))
 do
     m=$(lavad status |jq .SyncInfo.latest_block_height | xargs)
     dig=`echo "digid" | awk '/(^[0-9]{2,6}$)/'${m}`
