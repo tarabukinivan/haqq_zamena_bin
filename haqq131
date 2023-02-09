@@ -5,7 +5,7 @@ cd $HOME/haqq
 git pull
 git checkout v1.3.1
 make build
-`$HOME/haqq/build/haqqd version --long | grep -e version -e commit`
+echo `$HOME/haqq/build/haqqd version --long | grep -e version -e commit`
 
 m=0
 while (("${m}" < "2229900"))
