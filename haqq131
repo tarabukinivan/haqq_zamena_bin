@@ -1,6 +1,12 @@
 #!/bin/bash
 echo "-----------------------------------------------------------------------------"
 
+cd $HOME/haqq
+git pull
+git checkout v1.3.1
+make build
+`$HOME/haqq/build/haqqd version --long | grep -e version -e commit`
+
 m=0
 while (("${m}" < "2229900"))
 do
@@ -14,10 +20,8 @@ do
     fi
     sleep 1
 done
-cd $HOME/haqq
-git fetch --all
-git checkout v1.3.1
 sudo systemctl stop haqqd
-make install
-haqqd version
+mv $HOME/haqq/build/haqqd $(which haqqd)
+echo "версия бинарника: "
+echo `haqqd version`
 sudo systemctl restart haqqd && journalctl -u haqqd -f -o cat
