@@ -5,10 +5,10 @@ cd $HOME
 rm -rf lava
 git clone https://github.com/lavanet/lava
 cd $HOME/lava
-git checkout v0.5.2
+git checkout v0.6.0
 
 m=0
-while (("${m}" < "63760"))
+while (("${m}" < "82570"))
 do
     m=$(lavad status |jq .SyncInfo.latest_block_height | xargs)
     dig=`echo "digid" | awk '/(^[0-9]{2,6}$)/'${m}`
