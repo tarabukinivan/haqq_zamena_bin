@@ -21,7 +21,7 @@ do
     sleep 1
 done
 
-#systemctl stop lavad
-#mv $HOME/lava/build/lavad $(which lavad)
-#lavad version --long | grep -e version -e commit
-#systemctl restart lavad && journalctl -u lavad -f -o cat
+systemctl stop lavad
+mv $HOME/lava/build/lavad $(which lavad)
+lavad version --long | grep -e version -e commit
+systemctl restart lavad && journalctl -u lavad -f -o cat
