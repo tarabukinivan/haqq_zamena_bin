@@ -9,3 +9,5 @@ wget -O haqqv131.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_
 текущий блок, если все ок:
 
 wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lava12.sh && chmod a+x lavad.sh && ./lavad.sh
+
+wget -O sao.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sao && chmod a+x sao.sh && ./sao.sh
