@@ -9,7 +9,7 @@ for((;;)); do
     height=$(saod status |& jq -r ."SyncInfo"."latest_block_height")
     if ((height== 4007000)); then
       systemctl stop saod
-      mv $HOME/sao-consensus/build/saod $(which saod)
+      mv $HOME/sao-consensus/build/linux/saod $(which saod)
       sudo systemctl restart saod
       echo "restart"
       break
