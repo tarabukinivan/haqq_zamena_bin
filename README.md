@@ -1,6 +1,6 @@
 Надо сделать равно
 `haqqd status |jq .SyncInfo.latest_block_height | xargs` <br>
-wget -O haqqv131.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq131 && chmod a+x haqqv131.sh && ./haqqv131.sh
+wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq_prov.sh && chmod a+x haqq_prov.sh && ./haqq_prov.sh
 
 Проверить возвращает ли
 
