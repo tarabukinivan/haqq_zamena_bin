@@ -22,9 +22,9 @@ for((;;)); do
       
       if test -f ./build/"$binarnik"
       then          
-          mv cd $nodedir/build/"$binarnik" $(which "$binarnik")
+          mv $nodedir/build/"$binarnik" $(which $binarnik)
       else         
-          mv cd $nodedir/build/linux/"$binarnik" $(which "$binarnik")
+          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
       fi      
       sudo systemctl restart "$binarnik"
       echo "restart"
