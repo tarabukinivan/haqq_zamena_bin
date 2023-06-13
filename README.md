@@ -8,6 +8,6 @@ wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena
 
 текущий блок, если все ок:
 
-wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lava12.sh && chmod a+x lavad.sh && ./lavad.sh
+wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lava_prov.sh && chmod a+x lavad.sh && ./lavad.sh
 
 wget -O sao.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sao && chmod a+x sao.sh && ./sao.sh
