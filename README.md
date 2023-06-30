@@ -12,4 +12,4 @@ wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin
 
 wget -O sao.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sao016.sh && chmod a+x sao.sh && ./sao.sh
 
-wget -O sao.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/compprov.sh && chmod a+x compprov.sh && ./compprov.sh
+wget -O compprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/compprov.sh && chmod a+x compprov.sh && ./compprov.sh
