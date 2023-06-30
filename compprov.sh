@@ -13,7 +13,7 @@ if test -f ./build/"$binarnik"
 then
     echo "В build"    
 else
-    echo "В linux"    
+    echo "В bin"    
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
@@ -24,7 +24,7 @@ for((;;)); do
       then          
           mv $nodedir/build/"$binarnik" $(which $binarnik)
       else         
-          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
+          mv $nodedir/bin/"$binarnik" $(which $binarnik)
       fi      
       sudo systemctl restart "$binarnik"
       echo "restart"
