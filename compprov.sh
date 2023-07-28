@@ -3,7 +3,7 @@ echo "--------------------------------------------------------------------------
 
 binarnik="centaurid"
 nodedir="$HOME/composable-centauri"
-nodeversion="v4.0.1"
+nodeversion="v4.0.2"
 cd $nodedir
 git pull
 git checkout $nodeversion
