@@ -3,7 +3,7 @@ echo "--------------------------------------------------------------------------
 
 binarnik="centaurid"
 nodedir="$HOME/composable-centauri"
-nodeversion="v3.2.0"
+nodeversion="v4.0.1"
 cd $nodedir
 git pull
 git checkout $nodeversion
@@ -17,7 +17,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 420000)); then
+    if ((height == 792909)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
