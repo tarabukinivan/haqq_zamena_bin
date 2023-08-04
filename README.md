@@ -14,5 +14,4 @@ wget -O sao.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/m
 
 wget -O compprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/compprov.sh && chmod a+x compprov.sh && ./compprov.sh
 
-cascadiaprov.sh
-wget -O cascadiaprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/cascadiaprov.sh && chmod a+x cascadiaprov.sh && ./cascadiaprov.sh
+`wget -O cascadiaprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/cascadiaprov.sh && chmod a+x cascadiaprov.sh && ./cascadiaprov.sh`
