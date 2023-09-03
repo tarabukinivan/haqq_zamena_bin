@@ -20,9 +20,9 @@ for((;;)); do
       
       if test -f ./build/"$binarnik"
       then          
-          mv $HOME/sao-consensus/build/"$binarnik" $(which "$binarnik")
+          mv $nodedir/build/"$binarnik" $(which $binarnik)
       else         
-          mv $HOME/sao-consensus/build/linux/"$binarnik" $(which "$binarnik")
+          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
       fi      
       sudo systemctl restart "$binarnik"
       echo "restart"
