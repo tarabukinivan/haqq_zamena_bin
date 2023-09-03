@@ -4,7 +4,7 @@ echo "--------------------------------------------------------------------------
 binarnik="cascadiad"
 cd $HOME/cascadia
 git pull
-git checkout v0.1.4
+git checkout v0.1.5
 make build
 sleep 1
 if test -f ./build/"$binarnik"
@@ -15,7 +15,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 1774000)); then
+    if ((height == 2229000)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
