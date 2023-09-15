@@ -3,7 +3,7 @@ echo "--------------------------------------------------------------------------
 
 binarnik="gitopiad"
 nodedir="$HOME/gitopia"
-nodeversion="v3.0.0"
+nodeversion="v3.0.1"
 cd $nodedir
 git pull
 git checkout $nodeversion
