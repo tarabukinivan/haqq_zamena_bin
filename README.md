@@ -18,4 +18,5 @@ wget -O compprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_
 
 wget -O gitopiaprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/gitopiaprov.sh && chmod a+x gitopiaprov.sh && ./gitopiaprov.sh
 gitopiaprovbin.sh
+
 wget -O gitopiaprovbin.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/gitopiaprovbin.sh && chmod a+x gitopiaprovbin.sh && ./gitopiaprovbin.sh
