@@ -16,7 +16,7 @@ else
     echo "В bin"    
 fi 
 for((;;)); do
-    height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
+    height=$("$binarnik" status 2>&1 | jq -r ."SyncInfo"."latest_block_height")
     if ((height == 6720000)); then
       systemctl stop "$binarnik"
       
