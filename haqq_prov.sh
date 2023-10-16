@@ -7,7 +7,7 @@ nodeversion="v1.6.1"
 cd $nodedir
 git pull
 git checkout $nodeversion
-make build
+make build -B
 sleep 1
 if test -f ./build/"$binarnik"
 then
