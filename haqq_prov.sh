@@ -3,7 +3,7 @@ echo "--------------------------------------------------------------------------
 
 binarnik="haqqd"
 nodedir="$HOME/haqq"
-nodeversion="v1.6.0"
+nodeversion="v1.6.1"
 cd $nodedir
 git pull
 git checkout $nodeversion
@@ -17,7 +17,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 8002000)); then
+    if ((height == 8076500)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
