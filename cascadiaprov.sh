@@ -1,6 +1,6 @@
 #!/bin/bash
 echo "-----------------------------------------------------------------------------"
-
+nodedir="$HOME/cascadia"
 binarnik="cascadiad"
 cd $HOME/cascadia
 git pull
