@@ -2,6 +2,7 @@
 echo "-----------------------------------------------------------------------------"
 
 binarnik="lavad"
+binarnik2="lavap"
 nodedir="$HOME/lava"
 nodeversion="v0.25.2"
 cd $nodedir
@@ -26,8 +27,10 @@ for((;;)); do
       if test -f ./build/"$binarnik"
       then          
           mv $nodedir/build/"$binarnik" $(which $binarnik)
+          mv $nodedir/build/"$binarnik2" $(which $binarnik2)
       else         
           mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
+          mv $nodedir/build/linux/"$binarnik2" $(which $binarnik2)
       fi      
       sudo systemctl restart "$binarnik"
       echo "restart"
