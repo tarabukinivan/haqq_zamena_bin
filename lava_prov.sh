@@ -7,6 +7,9 @@ nodeversion="v0.25.2"
 cd $nodedir
 git pull
 git checkout $nodeversion
+export LAVA_BINARY=lavad
+make build -B
+export LAVA_BINARY=lavap
 make build -B
 sleep 1
 if test -f ./build/"$binarnik"
