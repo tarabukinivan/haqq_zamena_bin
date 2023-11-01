@@ -21,7 +21,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 551341)); then
+    if ((height == 554249)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
