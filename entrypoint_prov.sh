@@ -1,32 +1,24 @@
 #!/bin/bash
 echo "-----------------------------------------------------------------------------"
 
-binarnik="entrypointd"
-nodedir="$HOME/haqq"
-nodeversion="v1.6.3"
-cd $nodedir
-git pull
-git checkout $nodeversion
-make build -B
-sleep 1
-if test -f ./build/"$binarnik"
-then
-    echo "В build"    
-else
-    echo "В linux"    
-fi 
+cd $HOME
+if ! [ -d $HOME/tmp/ ]; then
+mkdir $HOME/tmp
+fi
+cd $HOME/tmp
+
+wget https://github.com/entrypoint-zone/testnets/releases/download/v1.2.0/entrypointd-1.2.0-linux-amd64.tgz &>/dev/null
+
+tar xvzf entrypointd-1.2.0-linux-amd64.tgz && rm entrypointd-1.2.0-linux-amd64.tgz
+
+
+
 for((;;)); do
-    height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 8282000)); then
-      systemctl stop "$binarnik"
-      
-      if test -f ./build/"$binarnik"
-      then          
-          mv $nodedir/build/"$binarnik" $(which $binarnik)
-      else         
-          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
-      fi      
-      sudo systemctl restart "$binarnik"
+    height=$(entrypointd status |& jq -r ."SyncInfo"."latest_block_height")
+    if ((height == 351000)); then
+      systemctl stop entrypointd
+      mv $HOME/tmp/build/entrypointd-1.2.0-linux-amd64 /root/go/bin/entrypointd
+      sudo systemctl restart entrypointd && journalctl -u entrypointd -f -o cat
       echo "restart"
       break
     else
@@ -34,4 +26,3 @@ for((;;)); do
     fi
     sleep 1
 done
-journalctl -u "$binarnik" -f -o cat
