@@ -4,7 +4,7 @@ echo "--------------------------------------------------------------------------
 binarnik="lavad"
 binarnik2="lavap"
 nodedir="$HOME/lava"
-nodeversion="v0.26.1"
+nodeversion="v0.27.0"
 cd $nodedir
 git pull
 git checkout $nodeversion
@@ -21,7 +21,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 554249)); then
+    if ((height == 590764)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
@@ -42,4 +42,5 @@ for((;;)); do
     fi
     sleep 1
 done
+
 journalctl -u "$binarnik" -f -o cat
