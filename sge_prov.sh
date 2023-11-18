@@ -5,7 +5,7 @@ binarnik="sged"
 cd $nodedir
 git pull
 git checkout v1.1.1
-make build
+make --ignore-errors build
 sleep 1
 if test -f ./build/"$binarnik"
 then
