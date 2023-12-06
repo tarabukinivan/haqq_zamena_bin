@@ -7,17 +7,14 @@ mkdir $HOME/tmp
 fi
 cd $HOME/tmp
 
-wget https://github.com/entrypoint-zone/testnets/releases/download/v1.2.0/entrypointd-1.2.0-linux-amd64.tgz &>/dev/null
-
-tar xvzf entrypointd-1.2.0-linux-amd64.tgz && rm entrypointd-1.2.0-linux-amd64.tgz
-
-
+wget -O entrypointd https://github.com/entrypoint-zone/testnets/releases/download/v1.3.0/entrypointd-1.3.0-linux-amd64
+chmod +x entrypointd
 
 for((;;)); do
     height=$(entrypointd status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 351000)); then
+    if ((height == 680000)); then
       systemctl stop entrypointd
-      mv $HOME/tmp/build/entrypointd-1.2.0-linux-amd64 /root/go/bin/entrypointd
+      mv $HOME/tmp/entrypointd /root/go/bin/entrypointd
       sudo systemctl restart entrypointd && journalctl -u entrypointd -f -o cat
       echo "restart"
       break
