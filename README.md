@@ -24,3 +24,5 @@ wget -O gitopiaprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zame
 wget -O gitopiaprovbin.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/gitopiaprovbin.sh && chmod a+x gitopiaprovbin.sh && ./gitopiaprovbin.sh
 
 wget -O sge_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sge_prov.sh && chmod a+x sge_prov.sh && ./sge_prov.sh
+
+wget -O sgetestnetprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sgetestnetprov.sh && chmod a+x sgetestnetprov.sh && ./sgetestnetprov.sh
