@@ -8,7 +8,7 @@ git pull
 git checkout v1.3.0
 make --ignore-errors build
 sleep 1
-if test -f ./build/"$binarnik"
+if test -f ./build/sged
 then
     echo "В build"    
 else
