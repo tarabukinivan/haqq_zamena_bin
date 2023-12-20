@@ -4,7 +4,7 @@ nodedir="$HOME/sge"
 binarnik="sged"
 cd $nodedir
 git pull
-git checkout v1.1.1
+git checkout v1.3.0
 make --ignore-errors build
 sleep 1
 if test -f ./build/"$binarnik"
