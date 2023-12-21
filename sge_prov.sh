@@ -4,8 +4,8 @@ nodedir="$HOME/sge"
 binarnik="sged"
 cd $nodedir
 git pull
-git checkout v1.3.0
-make --ignore-errors build
+git checkout v1.2.0
+make --ignore-errors build -B
 sleep 1
 if test -f ./build/"$binarnik"
 then
@@ -15,7 +15,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 1097000)); then
+    if ((height == 1564215)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
