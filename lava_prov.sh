@@ -2,7 +2,6 @@
 echo "-----------------------------------------------------------------------------"
 
 binarnik="lavad"
-binarnik2="lavap"
 nodedir="$HOME/lava"
 nodeversion="v0.30.2"
 cd $nodedir
@@ -10,9 +9,6 @@ git pull
 git checkout $nodeversion
 export LAVA_BINARY=lavad
 make build -B
-export LAVA_BINARY=lavap
-make build -B
-sleep 1
 if test -f ./build/"$binarnik"
 then
     echo "В build"    
@@ -21,18 +17,14 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 636006)); then
+    if ((height == 711251)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
       then          
-          mv $nodedir/build/"$binarnik" $(which $binarnik)
-          sleep 1
-          mv $nodedir/build/"$binarnik2" $(which $binarnik2)
+          mv $nodedir/build/"$binarnik" $(which $binarnik)         
       else         
-          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
-          sleep 1
-          mv $nodedir/build/linux/"$binarnik2" $(which $binarnik2)
+          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)         
       fi      
       sudo systemctl restart "$binarnik"
       echo "restart"
