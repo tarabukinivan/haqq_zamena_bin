@@ -3,7 +3,7 @@ echo "--------------------------------------------------------------------------
 
 binarnik="lavad"
 nodedir="$HOME/lava"
-nodeversion="v0.30.2"
+nodeversion="v0.32.0"
 cd $nodedir
 git pull
 git checkout $nodeversion
