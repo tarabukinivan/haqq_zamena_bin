@@ -7,6 +7,10 @@ wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena
 
 текущий блок, если все ок:
 
+warden_prov.sh
+
+wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lava_prov.sh && chmod a+x lavad.sh && ./lavad.sh
+
 wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lava_prov.sh && chmod a+x lavad.sh && ./lavad.sh
 
 wget -O lavapupd.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lavapprov.sh && chmod a+x lavapupd.sh && ./lavapupd.sh
