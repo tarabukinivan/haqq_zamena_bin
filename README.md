@@ -31,3 +31,5 @@ wget -O gitopiaprovbin.sh https://raw.githubusercontent.com/tarabukinivan/haqq_z
 wget -O sge_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sge_prov.sh && chmod a+x sge_prov.sh && ./sge_prov.sh
 
 wget -O sgetestnetprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/sgetestnetprov.sh && chmod a+x sgetestnetprov.sh && ./sgetestnetprov.sh
+
+wget -O tellor_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/tellor_prov.sh && chmod a+x tellor_prov.sh && ./tellor_prov.sh
