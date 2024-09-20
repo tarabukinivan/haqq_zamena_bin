@@ -35,3 +35,6 @@ wget -O sgetestnetprov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_z
 wget -O tellor_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/tellor_prov.sh && chmod a+x tellor_prov.sh && ./tellor_prov.sh
 
 wget -O story_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/story_prov.sh && chmod a+x story_prov.sh && ./story_prov.sh
+
+на65:
+wget -O allora_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/allora_prov.sh && chmod a+x allora_prov.sh && ./allora_prov.sh
