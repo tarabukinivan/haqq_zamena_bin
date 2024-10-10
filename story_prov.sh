@@ -13,7 +13,7 @@ sleep 1
 for((;;)); do
     height=$(curl -s http://167.235.39.5:26657/status | jq -r .result.sync_info.latest_block_height)
     if ((height == 1325860)); then
-      systemctl stop story
+      systemctl stop story-testnet.service
       sudo mv $HOME/story/story $(which story)        
       echo "restart"
       break
@@ -22,4 +22,4 @@ for((;;)); do
     fi
     sleep 1
 done
-sudo systemctl restart story && sudo journalctl -u story -f
+sudo systemctl restart story-testnet.service && sudo journalctl -u story-testnet.service -f
