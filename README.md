@@ -9,6 +9,7 @@ wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena
 
 warden_prov.sh
 
+wget -O air_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/air_prov.sh && chmod +x air_prov.sh && ./air_prov.sh
 wget -O warden_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/warden_prov.sh && chmod +x warden_prov.sh && ./warden_prov.sh
 wget -O lavad.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lava_prov.sh && chmod a+x lavad.sh && ./lavad.sh
 
