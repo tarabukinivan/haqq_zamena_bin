@@ -1,6 +1,8 @@
 
 wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq_prov.sh && chmod a+x haqq_prov.sh && ./haqq_prov.sh
 
+wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq_downbin.sh && chmod a+x haqq_downbin.sh && ./haqq_downbin.sh
+
 Проверить возвращает ли
 
 `lavad status |jq .SyncInfo.latest_block_height | xargs`
