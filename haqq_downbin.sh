@@ -11,7 +11,7 @@ wget -O $nodedir/haqq_1.8.2_linux_amd64.tar.gz $release
 sleep 1
 cd $nodedir
 tar -xvzf haqq_1.8.2_linux_amd64.tar.gz
-
+sleep 1
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
     if ((height == 13684000)); then
@@ -25,4 +25,6 @@ for((;;)); do
     fi
     sleep 1
 done
+cd $HOME
+rm -rf $nodedir
 journalctl -u "$binarnik" -f -o cat
