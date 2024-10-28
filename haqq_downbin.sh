@@ -12,6 +12,7 @@ sleep 1
 cd $nodedir
 tar -xvzf haqq_1.8.2_linux_amd64.tar.gz
 sleep 1
+chmod +x $nodedir/bin/"$binarnik"
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
     if ((height == 13684000)); then
