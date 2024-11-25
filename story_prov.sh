@@ -5,7 +5,7 @@ cd $HOME
 rm -rf story
 git clone https://github.com/piplabs/story
 cd $HOME/story
-git checkout v0.12.1
+git checkout v0.13.0
 go build -o story ./client
 
 sleep 1
