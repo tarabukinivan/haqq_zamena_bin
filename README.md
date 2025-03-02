@@ -1,3 +1,4 @@
+wget -O emped.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/emped.sh && chmod a+x emped.sh && ./emped.sh
 
 wget -O haqq_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/haqq_prov.sh && chmod a+x haqq_prov.sh && ./haqq_prov.sh
 
