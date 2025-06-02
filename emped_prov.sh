@@ -5,7 +5,7 @@ binarnik="emped"
 
 for((;;)); do
     height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 12380500)); then
+    if ((height == 5215651)); then
       systemctl stop "$binarnik"
       mv $HOME/tmp/empedbin/$binarnik $(which $binarnik)
       sudo systemctl restart "$binarnik"
