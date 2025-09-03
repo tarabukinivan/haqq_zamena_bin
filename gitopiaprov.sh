@@ -3,7 +3,7 @@ echo "--------------------------------------------------------------------------
 
 binarnik="gitopiad"
 nodedir="$HOME/gitopia"
-nodeversion="v4.0.0"
+nodeversion="v6"
 cd $nodedir
 git pull
 git checkout $nodeversion
@@ -17,7 +17,7 @@ else
 fi 
 for((;;)); do
     height=$("$binarnik" status 2>&1 | jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 24330422)); then
+    if ((height == 44200946)); then
       systemctl stop "$binarnik"
       
       if test -f ./build/"$binarnik"
