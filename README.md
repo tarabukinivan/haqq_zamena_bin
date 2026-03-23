@@ -1,3 +1,4 @@
+```
 lumen
 cd tmp
 curl -L https://github.com/network-lumen/blockchain/releases/download/v1.5.2/linux-amd64-v1.5.2 -o lumend
@@ -50,3 +51,4 @@ wget -O story_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamen
 
 на65:
 wget -O allora_prov.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/allora_prov.sh && chmod a+x allora_prov.sh && ./allora_prov.sh
+```
