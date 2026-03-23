@@ -6,13 +6,7 @@ for((;;)); do
     if ((height == 1750000)); then
       systemctl stop "$binarnik"
       systemctl stop lumend2
-      
-      if test -f ./build/"$binarnik"
-      then          
-          mv $nodedir/build/"$binarnik" $(which $binarnik)
-      else         
-          mv $nodedir/build/linux/"$binarnik" $(which $binarnik)
-      fi      
+      mv ./"$binarnik" $(which $binarnik)
       sudo systemctl restart "$binarnik"
       sudo systemctl restart lumend2
       echo "restart"
