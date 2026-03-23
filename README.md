@@ -1,3 +1,9 @@
+lumen
+cd tmp
+curl -L https://github.com/network-lumen/blockchain/releases/download/v1.5.2/linux-amd64-v1.5.2 -o lumend
+chmod +x lumend
+wget -O lumen.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/lumen_prov.sh && chmod a+x lumen.sh && ./lumen.sh
+
 wget -O emped.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/emped.sh && chmod a+x emped.sh && ./emped.sh
 
 wget -O emped.sh https://raw.githubusercontent.com/tarabukinivan/haqq_zamena_bin/main/emped_prov.sh && chmod a+x emped.sh && ./emped.sh
