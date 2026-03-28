@@ -1,4 +1,9 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+export DEBIAN_FRONTEND=noninteractive
+export NEEDRESTART_MODE=a
+
+set -e
 
 #wget -O setup_server.sh https://raw.githubusercontent.com/tarabukinivan/mergekit_conf/refs/heads/main/setup_server.sh?token=GHSAT0AAAAAADW2VZVXTTYJLVEOX3XHQV3Q2OH5QCQ && chmod a+x setup_server.sh && ./setup_server.sh
 set -e  # остановка при ошибке
