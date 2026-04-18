@@ -2,22 +2,16 @@
 echo "-----------------------------------------------------------------------------"
 
 binarnik="haqqd"
-nodedir="$HOME/haqq"
-release="https://github.com/haqq-network/haqq/releases/download/v1.8.2/haqq_1.8.2_linux_amd64.tar.gz"
-cd $HOME
-rm -rf $nodedir
-mkdir -p $nodedir
-wget -O $nodedir/haqq_1.8.2_linux_amd64.tar.gz $release
-sleep 1
+nodedir="$HOME/bin"
 cd $nodedir
-tar -xvzf haqq_1.8.2_linux_amd64.tar.gz
+
 sleep 1
-chmod +x $nodedir/bin/"$binarnik"
+chmod +x $nodedir/"$binarnik"
 for((;;)); do
-    height=$("$binarnik" status |& jq -r ."SyncInfo"."latest_block_height")
-    if ((height == 13684000)); then
+    height=$("$binarnik" status |& jq -r ."sync_info"."latest_block_height")
+    if ((height == 21135000)); then
       systemctl stop "$binarnik" 
-          mv $nodedir/bin/"$binarnik" $(which $binarnik)
+          mv $nodedir/"$binarnik" $(which $binarnik)
       sudo systemctl restart "$binarnik"
       echo "restart"
       break
@@ -27,5 +21,4 @@ for((;;)); do
     sleep 1
 done
 cd $HOME
-rm -rf $nodedir
 journalctl -u "$binarnik" -f -o cat
