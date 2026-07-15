@@ -40,12 +40,17 @@ echo "=== Запуск сервиса на порту $PORT ==="
 export DET_PORT=$PORT
 scripts/start_qwen36_current_profile.sh
 
+# Получение внешнего IP
+EXTERNAL_IP=$(curl -s ifconfig.me || curl -s ipinfo.io/ip || curl -s icanhazip.com)
+
 echo ""
 echo "=== ИНФОРМАЦИЯ О ЗАПУСКЕ ==="
+echo "Внешний IP: $EXTERNAL_IP"
 echo "API ключ:"
 cat /root/out/qwen36_current_profile/api_key.txt
 echo ""
 echo "Порт: $PORT"
+echo "URL для подключения: http://$EXTERNAL_IP:$PORT"
 echo ""
 echo "Для просмотра логов выполните:"
 echo "tail -f /root/out/qwen36_current_profile/server.log"
