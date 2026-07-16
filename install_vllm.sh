@@ -39,7 +39,6 @@ EXTERNAL_IP=$(curl -s ifconfig.me || curl -s ipinfo.io/ip || curl -s icanhazip.c
 
 echo ""
 echo "=== ИНФОРМАЦИЯ О ЗАПУСКЕ ==="
-echo "IP: $EXTERNAL_IP"
 echo "API ключ:"
 cat /root/out/qwen36_current_profile/api_key.txt
 echo ""
