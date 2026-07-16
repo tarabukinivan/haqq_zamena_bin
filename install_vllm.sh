@@ -16,7 +16,7 @@ if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
 fi
 
 echo "=== Клонирование репозитория ==="
-git clone https://github.com/kingcharlezz/qwen36-current-profile-endpoint.git /root/qwen36-current-profile-endpoint
+git clone https://github.com/tarabukinivan/qwen36-current-profile-endpoint.git /root/qwen36-current-profile-endpoint
 
 echo "=== Установка vLLM ==="
 cd /root/qwen36-current-profile-endpoint
