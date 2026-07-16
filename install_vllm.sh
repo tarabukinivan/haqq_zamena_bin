@@ -15,12 +15,6 @@ if ! [[ "$PORT" =~ ^[0-9]+$ ]]; then
     exit 1
 fi
 
-echo "=== Обновление пакетов ==="
-apt update -y
-
-echo "=== Установка необходимых пакетов ==="
-apt install tmux nano sudo wget -y
-
 echo "=== Клонирование репозитория ==="
 git clone https://github.com/kingcharlezz/qwen36-current-profile-endpoint.git /root/qwen36-current-profile-endpoint
 
