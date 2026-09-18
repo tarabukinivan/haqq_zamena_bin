@@ -3,7 +3,7 @@ binarnik="lumend"
 
 for((;;)); do
     height=$("$binarnik" status | jq -r '.sync_info.latest_block_height')
-    if ((height == 2035000)); then
+    if ((height == 4740000)); then
       systemctl stop "$binarnik"
       systemctl stop lumend2
       mv /root/tmp/"$binarnik" $(which $binarnik)
